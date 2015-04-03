@@ -1,0 +1,9 @@
+This will have the form for creating a new track that simply has a name
+
+
+<%= form_for [@day, Track.new] do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name, class: 'form-control', placeholder: "Enter a Track name" %>
+<%= f.submit "Save", class: 'btn btn-success' %>
+
+<% end %>

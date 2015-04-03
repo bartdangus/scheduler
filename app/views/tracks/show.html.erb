@@ -1,0 +1,15 @@
+
+  <h1><%= @track.name %></h1>
+
+
+Link to new event 
+
+<%= link_to "New event", new_day_track_event_path(@day, @track, @event),  class: 'btn btn-primary'%>
+
+
+This should show, all the events in the track, but doesn't really need to be a feature currently.
+
+
+
+
+<%= @track.events.all %>

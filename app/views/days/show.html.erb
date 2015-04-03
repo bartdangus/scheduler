@@ -1,0 +1,27 @@
+<h1><%= @day.name %></h1>
+<h3><p> You're schedule looks like... </p><h3>
+
+<h2><% @tracks.each do |track| %>
+  <%= link_to track.name, [@day, track] %>
+  <% end %></h2>
+
+<h3><% @track.events.each do |event| %>
+  <%= link_to event.name,[@day, @track, event] %>
+  <% end %></h3>
+
+<h3><% @track.events.each do |event| %>
+  <%= link_to event.start_time,[@day, @track, event] %>
+  <% end %></h3>
+
+  <h3><% @track.events.each do |event| %>
+  <%= link_to event.end_time,[@day, @track, event] %>
+  <% end %></h3>
+
+This should show the individual days with all the events
+
+This will have the create a new event
+ 
+
+
+Create new track
+<%= link_to "New Track", new_day_track_path(@day, @track), class: 'btn btn-success' %>

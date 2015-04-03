@@ -1,0 +1,13 @@
+<p>No this is where a list of all the days will be shown.</p>
+
+
+<%= @days.each do |day| %>
+  <%= link_to day.name, (@day)%>
+  <% end %>
+
+
+
+<%= link_to " Create a New Day", new_day_path, class: 'btn btn-success' %>
+
+
+
