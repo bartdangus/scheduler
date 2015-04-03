@@ -3,7 +3,7 @@
 
 This is where a new event will be created
 
-<%= form_for [@day, @track, Event.new] do |f| %>
+<%= form_for [@day, @track, @event] do |f| %>
 <%= f.label :name %>
 <%= f.text_field :name, class: 'form-control', placeholder: "Enter the event" %>
 
